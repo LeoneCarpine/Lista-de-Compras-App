@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="250dp"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:gravity="center_vertical"
+    android:background="?attr/selectableItemBackground">
+
+    <ImageView
+        android:id="@+id/iv_lista_main"
+        android:layout_width="match_parent"
+        android:layout_height="190dp"
+        android:src="@drawable/ic_carrinho"
+        android:scaleType="centerCrop"
+        android:contentDescription="@string/imgMain"/>
+
+    <TextView
+        android:id="@+id/tv_titulo_lista"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:textSize="18sp"
+        android:textColor="@android:color/black"
+        tools:text="Compras da Semana" />
+</LinearLayout>

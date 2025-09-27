@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">ListaCompraApp</string>
+    
+    <string name="img_login">Logo do Aplicativo</string>
+    <string name="email">Email@gmail.com</string>
+    <string name="senha">Senha</string>
+    <string name="acessar">Acessar</string>
+    <string name="addConta">Criar Conta</string>
+    <string name="nome">Seu nome</string>
+
+    <string name="confSenha">Confirmar Senha</string>
+
+    <string name="buscar">Buscar</string>
+    <string name="logout">Sair</string>
+    <string name="imgMain">Imagem da Lista</string>
+    <string name="addList">Adicionar nova lista de compras</string>
+</resources>
