@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">ListaCompraApp</string>
-    
+
     <string name="img_login">Logo do Aplicativo</string>
     <string name="email">Email@gmail.com</string>
     <string name="senha">Senha</string>
@@ -14,4 +14,20 @@
     <string name="logout">Sair</string>
     <string name="imgMain">Imagem da Lista</string>
     <string name="addList">Adicionar nova lista de compras</string>
+
+    <string name="listName">Nome da Lista</string>
+    <string name="addImgList">Adicionar mídia do dispositivo</string>
+
+    <string-array name="unidades">
+        <item>un</item>
+        <item>kg</item>
+        <item>g</item>
+        <item>L</item>
+    </string-array>
+
+    <string-array name="categorias">
+        <item>Frutas/Verduras</item>
+        <item>Proteína</item>
+        <item>Outros</item>
+    </string-array>
 </resources>

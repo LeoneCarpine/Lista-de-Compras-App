@@ -1,3 +1,12 @@
 package com.example.listacompraapp
 
-data class ListadeCompras(val id: Int, val titulo: String, val imgResId: Int? = null)
+import android.os.Parcelable
+import kotlinx.parcelize.Parcelize
+
+@Parcelize
+data class ListaDeCompras(
+    val id: Int,
+    val titulo: String,
+    val imgResId: String? = null,
+    val itens: MutableList<ItemCompra> = mutableListOf()
+) : Parcelable

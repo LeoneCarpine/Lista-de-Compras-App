@@ -1,5 +1,7 @@
 package com.example.listacompraapp
 
+import android.net.Uri
+import coil.load
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -8,7 +10,8 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
 class ListasAdapter(
-    private val listas: List<ListadeCompras>
+    private val listas: MutableList<ListaDeCompras>,
+    private val onItemClicked: (ListaDeCompras) -> Unit
 ) : RecyclerView.Adapter<ListasAdapter.ListaViewHolder>() {
 
     class ListaViewHolder(view: View) : RecyclerView.ViewHolder(view) {
@@ -23,18 +26,21 @@ class ListasAdapter(
     }
 
     override fun onBindViewHolder(holder: ListaViewHolder, position: Int) {
-        // Pega o item da lista de dados na posição atual
+        // Pega o item da lista de dados na posição atual e define o texto do TextView do ViewHolder com o título da lista
         val lista = listas[position]
-
-        // Define o texto do TextView do ViewHolder com o título da nossa lista
         holder.tvTituloLista.text = lista.titulo
 
-        // Verifica se há uma imagem para ser exibida
         if (lista.imgResId != null) {
-            holder.ivImagemLista.setImageResource(lista.imgResId)
+            val uri = Uri.parse(lista.imgResId)
+            holder.ivImagemLista.load(uri){
+                error(R.drawable.ic_default_img_foreground)
+            }
         } else {
-            // Se não houver imagem, podemos colocar uma imagem padrão
-            holder.ivImagemLista.setImageResource(R.drawable.ic_carrinho) // Usando seu ícone padrão
+            // Se não houver imagem, define uma imagem padrão
+            holder.ivImagemLista.setImageResource(R.drawable.ic_default_img_foreground)
+        }
+        holder.itemView.setOnClickListener {
+            onItemClicked(lista) //chama a fun na main que informa qual lista foi clicada
         }
     }
 

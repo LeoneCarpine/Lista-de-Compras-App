@@ -25,8 +25,6 @@ class CadastroActivity : AppCompatActivity() {
             val senha: String = binding.tietSenhaCadastro.text.toString().trim()
             val confirmarSenha: String = binding.tietConfirmarSenhaCadastro.text.toString().trim()
 
-            binding.tilNomeCadastro.error = null
-            binding.tilEmailCadastro.error = null
             binding.tilSenhaCadastro.error = null
             binding.tilConfirmarSenhaCadastro.error = null
 
